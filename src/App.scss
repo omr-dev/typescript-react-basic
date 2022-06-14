@@ -2,4 +2,12 @@ body {
   background-color: #333;
   color: #ccc;
   padding: 10px;
+  .App {
+    ol {
+      font-size: 1.5rem;
+      li{
+        margin-bottom: 10px;
+      }
+    }
+  }
 }

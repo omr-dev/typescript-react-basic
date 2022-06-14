@@ -15,8 +15,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hi!</h1>
-      {books.length > 0 ? <h2>{`There are ${books.length} books`}</h2> : <h2>Loading...</h2>}
+
+      {books.length > 0
+        ? <>
+          <h1>{`There are ${books.length} books`}</h1>
+          <ol>
+            {books.map((book) => {
+              return <li>{book.title} ({book.authors ? book.authors[0].name : 'unknown'})</li>
+            })}</ol></> : <h1>Loading...</h1>}
     </div>
   )
 }
